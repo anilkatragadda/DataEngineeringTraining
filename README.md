@@ -1,4 +1,4 @@
-# DataEngineeringTraining
+# Data Engineering Training
 Training for Data Engineers
 
 
