@@ -3,10 +3,10 @@
 ## Python
 
 
-###     Basics
+### 1. Basics
 
 
-###     Object Oriented
+### 2. Object Oriented
 
 ## Linux Basics
 
@@ -14,9 +14,9 @@
 
 ## Distributed Data Systems
 
-  ###     Hadoop
-  ###     HDFS
-  ###     Hive
+  ### 1. Hadoop
+  ### 2. HDFS
+  ### 3. Hive
 
 ## Spark
 
@@ -30,8 +30,8 @@
 
 ## Cloud Computing
 
-## Processes
+## Real-Time Process examples
 
-  ###     Data Engineering in the Cloud 
+  ### 1. Data Engineering in the AWS Cloud 
 
 
