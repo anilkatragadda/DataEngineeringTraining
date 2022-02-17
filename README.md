@@ -10,4 +10,4 @@ Training for Data Engineers
 
 ## Beginners to Advanced
 
-  [Course Content](https://github.com/anilkatragadda/DataEngineeringTraining/blob/main/beginners.md)
+  [Course Contents](https://github.com/anilkatragadda/DataEngineeringTraining/blob/main/beginners.md)
