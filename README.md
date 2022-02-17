@@ -2,7 +2,7 @@
 Training for Data Engineers
 
 
-## Fast Paced for experience engineers
+## Fast-paced for experience engineers
 
 
 
