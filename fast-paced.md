@@ -4,9 +4,18 @@
 
 
 ### 1. Basics
-
+1. Introduction to Python
+2. Operators and Flow Controls
+3. Data Types
+4. Data Structures (List, Tuple, Set Dictionary)
 
 ### 2. Object Oriented
+1. Functions
+2. Modules
+3. Packages
+4. Logging
+5. Exception Handling
+
 
 ## Linux Basics
 
