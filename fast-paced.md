@@ -9,7 +9,7 @@
 3. Data Types
 4. Data Structures (List, Tuple, Set Dictionary)
 
-### 2. Object Oriented
+### 2. Advanced
 1. Functions
 2. Modules
 3. Packages
