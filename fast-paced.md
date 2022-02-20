@@ -1,5 +1,7 @@
 # Course Content
 
+20 Hrs of training
+
 ## Python 
 
 
