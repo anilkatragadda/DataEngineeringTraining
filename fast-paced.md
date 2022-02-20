@@ -18,29 +18,42 @@
 
 
 ## Linux Basics
+1. Basic commands in Linux
 
 ## SQL
+1. SQL Basics
+2. SQL Joins
+3. Aggregations, Case Statements
+4. Sub Queries
+5. Window Functions
 
 ## Distributed Data Systems
 
-  ### 1. Hadoop
+  ### 1. Hadoop    
   ### 2. HDFS
   ### 3. Hive
 
 ## Spark
+1. Spark Core Concepts
+2. Spark Architecture
+3. Spark Memory Management
+4. Spark DataFrames and Spark SQL
+5. Spark Performance Tuning
 
 ## Pandas
 
 ## Spark Streaming
+- Structured Streaming Concepts
+- Structured Streaming / Dstreams use cases
 
 ## Airflow
 
 ## Kafka / AWS Kinesis
+- Basics for consuming or publishing using spark streaming
 
-## Cloud Computing
+## AWS Cloud Computing
+- AWS S3, EMR
 
 ## Real-Time Process examples
 
-  ### 1. Data Engineering in the AWS Cloud 
-
-
+  ### 1. Data Engineering in the AWS Cloud
