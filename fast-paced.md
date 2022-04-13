@@ -53,8 +53,8 @@
 ## Kafka / AWS Kinesis (1 Hr)
 - Basics for consuming or publishing using spark streaming
 
-## AWS Cloud Computing (1/2 Hr)
-- AWS S3, EMR
+## AWS Cloud Computing (3 Hrs)
+- AWS S3, EMR, Lambda, Glue, Cloudwatch etc...
 
 ## Real-Time Process examples (2 Hrs)
 
