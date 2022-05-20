@@ -28,5 +28,5 @@
 
 [comments](https://github.com/anilkatragadda/DataEngineeringTraining/blob/84b7dd5bbaa29dbd19cc8b3567a528db14cd493a/comments.md)
 
-[print statements]()
+[print statements](https://github.com/anilkatragadda/DataEngineeringTraining/blob/b0353faee80e4a9113ca7a6c66cb1f6be49fe6a2/print%20statements.md)
 
