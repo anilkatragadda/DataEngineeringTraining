@@ -26,7 +26,7 @@
  - In Python we are not required to declare type for variables. Whenever we are assigning the value, based on value, type will be allocated automatically.Hence Python is considered as dynamically typed language.
  - 
 
-[comments]()
+[comments](https://github.com/anilkatragadda/DataEngineeringTraining/blob/84b7dd5bbaa29dbd19cc8b3567a528db14cd493a/comments.md)
 
 [print statements]()
 
