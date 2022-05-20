@@ -7,4 +7,4 @@
 
  - seq[start]
  - seq[start:end]
- - seq[start:end:step]
+ - seq[start:'end':step]
