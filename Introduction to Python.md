@@ -12,8 +12,21 @@
 
 ## Data Types
 
- - Integral Types
- - Integers
- - Booleans
-  - 
+ - Integers -- int()
+ - Booleans -- bool()
+ 1. True
+ 2. False
+
+ - Floating-Point Types -- float()
+ - Strings -- str()
+
+## Basics
+
+### Dynamically Typed
+ - In Python we are not required to declare type for variables. Whenever we are assigning the value, based on value, type will be allocated automatically.Hence Python is considered as dynamically typed language.
+ - 
+
+[comments]()
+
+[print statements]()
 
