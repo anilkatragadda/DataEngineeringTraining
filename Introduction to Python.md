@@ -10,5 +10,10 @@
  - C:\py3eg\>hello.py
 
 
+## Data Types
 
+ - Integral Types
+ - Integers
+ - Booleans
+  - 
 
