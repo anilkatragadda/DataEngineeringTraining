@@ -1,0 +1,102 @@
+{
+	"sql_steps": [{
+			"sql_num": "1",
+			"action": "read|publish",
+			"sql": "select original_claim_num_cd, parent_claim_num_cd, child_claim_num_cd, claim_ordinal_value_num from ods_vw_service.mv_consume_claim_ln_reprocess_assn where claim_ln_reprocess_tp_cd = 'RORGCL' union select original_claim_num_cd, parent_claim_num_cd, child_claim_num_cd, claim_ordinal_value_num from ods_vw_service.mv_consume_claim_ln_reprocess_assn where claim_ln_reprocess_tp_cd != 'RORGCL' and parent_claim_num_cd != child_claim_num_cd",
+			"temp_view": "consume_claim_ln_reprocess_assn",
+			"next_sql": "2"
+		},
+		{
+			"sql_num": "2",
+			"action": "write|parquet",
+			"sql": "select * from consume_claim_ln_reprocess_assn",
+			"location": "sandbox/claims_reprocess/06-07/claim_ln_repr_ordinal_2/",
+			"mode": "overwrite",
+			"next_sql": "3"
+		},
+		{
+			"sql_num": "3",
+			"action": "read|parquet",
+			"location": "sandbox/claims_reprocess/06-07/claim_ln_repr_ordinal_2/",
+			"temp_view": "claim_ln_repr_ordinal",
+			"next_sql": "4"
+		},
+		{
+			"sql_num": "4",
+			"action": "write|publish",
+			"temp_view": "claim_ln_repr_ordinal",
+			"schema_name": "ods_claim",
+			"table_name": "claim_header_version_step_new_1",
+			"truncate": 0,
+			"next_sql": "5"
+		},
+		{
+			"sql_num": "5",
+			"action": "read|publish",
+			"sql": "select a.original_claim_num_cd as claim_num_cd , b.original_claim_num_cd as parent_claim_num_cd from ods_claim.claim_header_version_step_new_1 a, ods_claim.claim_header_version_step_new_1 b where a.original_claim_num_cd<>b.original_claim_num_cd and (a.original_claim_num_cd=b.parent_claim_num_cd or a.original_claim_num_cd=b.child_claim_num_cd )",
+			"temp_view": "filtered_claims",
+			"next_sql": "6"
+		},
+		{
+			"sql_num": "6",
+			"action": "write|parquet",
+			"sql": "select * from filtered_claims",
+			"location": "sandbox/claims_reprocess/06-07/claims_remove/",
+			"mode": "overwrite",
+			"next_sql": "7"
+		},
+		{
+			"sql_num": "7",
+			"action": "read|parquet",
+			"location": "sandbox/claims_reprocess/06-07/claims_remove/",
+			"temp_view": "claims_remove",
+			"cache": "true",
+			"next_sql": "8"
+		},
+		{
+			"sql_num": "8",
+			"action": "read|temp_view",
+			"sql": "select step1.* from claim_ln_repr_ordinal step1 left join claims_remove r on step1.original_claim_num_cd = r.claim_num_cd where (step1.claim_ordinal_value_num !=0 and r.claim_num_cd = step1.original_claim_num_cd)",
+			"temp_view": "claim_header_version_delete",
+			"next_sql": "9"
+		},
+		{
+			"sql_num": "9",
+			"action": "read|temp_view",
+			"sql": "select original_claim_num_cd, step2.parent_claim_num_cd, child_claim_num_cd, case when r.claim_num_cd is null then claim_ordinal_value_num else  (claim_ordinal_value_num + 1000) end as  claim_ordinal_value_num  from claim_header_version_delete step2 left join claims_remove r on claim_num_cd = original_claim_num_cd where step2.original_claim_num_cd = r.claim_num_cd",
+			"temp_view": "claim_header_version_update1",
+			"next_sql": "10"
+		},
+		{
+			"sql_num": "10",
+			"action": "read|temp_view",
+			"sql": "select case when step3.original_claim_num_cd != r.claim_num_cd then original_claim_num_cd else r.parent_claim_num_cd end as original_claim_num_cd, step3.parent_claim_num_cd, child_claim_num_cd,   claim_ordinal_value_num  from claim_header_version_update1 step3 left join claims_remove r on claim_num_cd = original_claim_num_cd where step3.original_claim_num_cd = r.claim_num_cd",
+			"temp_view": "claim_header_version_update2",
+			"next_sql": "11"
+		},
+		{
+			"sql_num": "11",
+			"action": "read|temp_view",
+			"sql": "select original_claim_num_cd, parent_claim_num_cd, child_claim_num_cd, claim_ordinal_value_num as claim_line_ordinal_value_num, claim_ordinal_value_num_final-1 as claim_header_version from ( select *, row_number() over(partition by original_claim_num_cd order by claim_ordinal_value_num) as claim_ordinal_value_num_final from claim_header_version_update2)a",
+			"temp_view": "claim_header_version_step5",
+			"next_sql": "12"
+		},
+		{
+			"sql_num": "12",
+			"action": "write|delta",
+			"sql": "select * from claim_header_version_step5",
+			"schema_name": "ods_ref_claim",
+			"table_name": "claim_header_version_2",
+			"next_sql": "13"
+		},
+		{
+			"sql_num": "13",
+			"action": "write|publish",
+			"temp_view": "claim_header_version_step5",
+			"schema_name": "ods_claim",
+			"table_name": "claim_header_version_final_1",
+			"truncate": 0,
+			"next_sql": "14"
+		}
+	]
+}
