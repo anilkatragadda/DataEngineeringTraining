@@ -52,8 +52,10 @@
 - Basics for consuming or publishing using spark streaming
 
 ## AWS Cloud Computing
-- AWS S3, EMR
+- AWS S3, EMR, Lambda, Glue, Step Functions, Kinesis, Cloudwatch etc...
 
 ## Real-Time Process examples
 
   ### 1. Data Engineering in the AWS Cloud
+  ### 2. Data Engineering Framework project
+  
