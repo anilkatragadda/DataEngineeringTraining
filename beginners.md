@@ -46,7 +46,10 @@
 - Structured Streaming Concepts
 - Structured Streaming / Dstreams use cases
 
-## Airflow
+## Terraform
+- Create AWS Resources
+- Destroy AWS resources
+- State Management and modification
 
 ## Kafka / AWS Kinesis
 - Basics for consuming or publishing using spark streaming
