@@ -80,9 +80,21 @@
 - Pipeline process flows in Lucid Charts
 - Explore using Miro
 
+## SDLC
+- Aglie Processes
+- JIRA / Azure DevOps
+- Scrum management
+
 ## Docker
 
 ## Kubernetes
+
+## DevOps tools
+- Jenkins
+- Gitlab/Bitbuket
+- CodeSpaces
+- Github Copilot
+- Replit Ghostwriter
 
 ## Monitoring Tools
 - Grafanna
