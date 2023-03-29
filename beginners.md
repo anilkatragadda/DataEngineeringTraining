@@ -1,4 +1,4 @@
-# Beginners Course
+# Data Engineering Course
 
 
 ## Python
@@ -7,7 +7,7 @@
 1. Introduction to Python
 2. Operators and Flow Controls
 3. Data Types
-4. Data Structures (List, Tuple, Set Dictionary)
+4. Data Structures (List, Tuple, Set, Dictionary)
 
 ### 2. Object Oriented
 1. Functions
@@ -46,8 +46,13 @@
 - Structured Streaming Concepts
 - Structured Streaming / Dstreams use cases
 
+## File Formats
+- Parquet
+- JSON etc
+- data Cleansing
+
 ## Terraform
-- Create AWS Resources
+- Create AWS Networking, lambda Functions, API gateways, SNS, SMS, SES, Glue, Resources
 - Destroy AWS resources
 - State Management and modification
 
@@ -55,7 +60,47 @@
 - Basics for consuming or publishing using spark streaming
 
 ## AWS Cloud Computing
-- AWS S3, EMR, Lambda, Glue, Step Functions, Kinesis, Cloudwatch etc...
+- AWS S3, EMR, Lambda, Glue, Step Functions, Event Bridge, Kinesis, Redshift, Fargate Cloudwatch
+- RDS Aurora, DMS, EKS, MSK, ECS
+
+## Azure
+- Azure Blob
+- ADF
+- Databricks on Azure
+
+## Data Pipelines
+- Airflow
+- Apache NiFi
+- Kafka
+
+## Docker
+
+## Kubernetes
+
+## Monitoring Tools
+- Grafanna
+- Prometheus
+- ELK Stack
+
+## Splunk
+- splunk queries
+- splunk Dashboard
+
+## Databricks
+
+## Snowflake
+
+## Alteryx
+
+## Non-Relational Databases
+- MongoDB
+- Cassandra DB
+
+## Relational DB
+- mysql
+- postgres
+- DB Tools
+
 
 ## Real-Time Process examples
 
