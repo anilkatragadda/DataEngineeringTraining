@@ -46,6 +46,10 @@
 - Structured Streaming Concepts
 - Structured Streaming / Dstreams use cases
 
+## Scala
+- Scala basics
+- Spark with Scala
+
 ## File Formats
 - Parquet
 - JSON etc
