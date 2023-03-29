@@ -16,7 +16,6 @@
 4. Logging
 5. Exception Handling
 
-
 ## Linux Basics
 1. Basic commands in Linux
 
@@ -76,6 +75,10 @@
 - Airflow
 - Apache NiFi
 - Kafka
+
+## data Architecture Designs
+- Pipeline process flows in Lucid Charts
+- Explore using Miro
 
 ## Docker
 
