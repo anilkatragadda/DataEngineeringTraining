@@ -76,7 +76,7 @@
 - Apache NiFi
 - Kafka
 
-## data Architecture Designs
+## Data Architecture Designs
 - Pipeline process flows in Lucid Charts
 - Explore using Miro
 
