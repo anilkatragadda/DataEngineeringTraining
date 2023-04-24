@@ -63,6 +63,7 @@
 - Basics for consuming or publishing using spark streaming
 
 ## AWS Cloud Computing
+- Undertsanding AWS (User Account, Roles, ec2, vpc etc..) 
 - AWS S3, EMR, Lambda, Glue, Step Functions, Event Bridge, Kinesis, Redshift, Fargate Cloudwatch
 - RDS Aurora, DMS, EKS, MSK, ECS
 
