@@ -73,7 +73,7 @@
 - Databricks on Azure
 
 ## Data Pipelines
-- Airflow
+- Airflow (Managed Airflow on AWS)
 - Apache NiFi
 - Kafka
 
