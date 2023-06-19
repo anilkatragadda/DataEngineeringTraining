@@ -125,5 +125,19 @@
 ## Real-Time Process examples
 
   ### 1. Data Engineering in the AWS Cloud
-  ### 2. Data Engineering Framework project
+        1.1 File acquisition pipeline using AWS services and Terraform - Step Function, Lambda, Event Bridge, AWS Glue, Dynamo DB, SNS etc...
+        1.2 Data Migration Service and pipeline built on AWS services and Terraform - DMS, parquet file formats, AWS Glue, S3 and Config files
+  
+  ### 2. Data Engineering in the AWS Cloud
+        2.1 NYC Taxi data producer using Python and Java
+        2.2 Kinesis data stream, Consumer - Apache Flink and Apache Spark
+        2.3 Various data analysis algorithms on Kinesis Data Streams using Flink and Spark
+        2.4 Spark and Flink using EMR and EKS
+        2.5 Streaming using Kafka services (AWS MKS)
+        2.6 Build real-time data visualization dashboards using Kibana for NYC streaming data.
+        2.7 Various dashboards using Tablue Visualization types and Animation (connect Tablue with R to perform calculations)
+        2.8 Run Airports big data using google page rank algorithm and Spark graphviz package to rank airports based on traffic
+        
+  ### 3. Data Engineering Framework project on EMR
+  
   
